@@ -1,0 +1,23 @@
+*{
+	margin:0;
+	padding:0;
+	border-size:border-box; 
+}
+.middlebar{
+
+/*overflow-x: hidden;*/
+/*overflow: scroll;*/
+overflow-y: scroll;
+width: 100%;
+height: 100vh;
+}
+
+.room_div{
+     margin-top: 5px;
+     margin-bottom: 5px;
+	width: 100%;
+	height: 500px;
+	border-radius: 10px;
+	/*border-color: #FF5733;*/
+}
+
