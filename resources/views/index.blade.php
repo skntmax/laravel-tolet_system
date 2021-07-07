@@ -14,8 +14,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
  <!-- <script type="text/javascript" href="{{asset('./yoyo/js/javascript.js')}}"></script> -->
  <link rel="stylesheet" type="text/css" href="{{asset('./yoyo/css/style.css')}}">
+// replace google map api key with the original one  
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAtlTCNyyiOcLf2pgqkUDQLTvN_bgbWv_Y"></script>
-
+ 
 </head>
 <body> 
 
