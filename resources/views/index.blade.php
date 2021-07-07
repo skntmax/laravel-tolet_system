@@ -12,10 +12,10 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-
-
  <!-- <script type="text/javascript" href="{{asset('./yoyo/js/javascript.js')}}"></script> -->
  <link rel="stylesheet" type="text/css" href="{{asset('./yoyo/css/style.css')}}">
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAtlTCNyyiOcLf2pgqkUDQLTvN_bgbWv_Y"></script>
+
 </head>
 <body> 
 
@@ -93,7 +93,7 @@
  <section class=" mt-1 mb-1 ">
   <form action="submit_search/" method="post" accept-charset="utf-8">
  @csrf
-   <input class="search_bar" type="text" name="location"  placeholder="Near Me">
+   <input class="search_bar" type="text" name="location" id="location"  placeholder="Near Me">
 
 <select name="category" id="category" placeholder="category">
   <option value="bachelor">bachelor</option>
@@ -252,4 +252,21 @@
 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
+
+<script type="text/javascript">
+ var searchInput = 'location';
+$(document).ready(function(){
+  var autocomplete;
+   autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)),{
+  types: ['geocode']
+   }); 
+
+  google.maps.event.addListener(autocomplete, 'place_changed', function () {
+  var near_place = autocomplete.getPlace();
+ });
+
+});   
+
+</script>
+
 </html>
